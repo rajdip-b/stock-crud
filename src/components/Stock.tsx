@@ -13,7 +13,7 @@ const Stock: React.FC<{stock: StockType; onSaveClick: (stock: StockType) => void
         toggleEditMode();
     }, [props, updatedStock, toggleEditMode]);
 
-    return <div className="grid grid-cols-7 gap-5 py-4 border-b-gray-200 border-b text-gray-700 hover:bg-gray-100 px-3 transition-all ease-out duration-300">
+    return <div className="grid grid-cols-9 gap-5 py-4 border-b-gray-200 border-b text-gray-700 hover:bg-gray-100 px-3 transition-all ease-out duration-300">
         {
             isEditMode ?
             <>
@@ -30,6 +30,9 @@ const Stock: React.FC<{stock: StockType; onSaveClick: (stock: StockType) => void
             </>
         :
             <>
+                <div className="col-span-2">
+                    {props.stock.name}
+                </div>
                 <div>{props.stock.open}
                 </div>
                 <div>{props.stock.high}
