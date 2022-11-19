@@ -17,6 +17,7 @@ const Stock: React.FC<{stock: StockType; onSaveClick: (stock: StockType) => void
         {
             isEditMode ?
             <>
+                <input type="text" value={updatedStock?.name} onChange={(e) => setUpdatedStock({...updatedStock, name: e.target.value})} className="w-full outline-none bg-transparent py-2 bg-gray-100 col-span-2" />
                 <input type="number" value={updatedStock?.open} onChange={(e) => setUpdatedStock({...updatedStock, open: e.target.value})} className="w-full outline-none bg-transparent py-2 bg-gray-100" />
                 <input type="number" value={updatedStock?.high} onChange={(e) => setUpdatedStock({...updatedStock, high: e.target.value})} className="w-full outline-none bg-transparent py-2 bg-gray-100" />
                 <input type="number" value={updatedStock?.low} onChange={(e) => setUpdatedStock({...updatedStock, low: e.target.value})} className="w-full outline-none bg-transparent py-2 bg-gray-100" />
